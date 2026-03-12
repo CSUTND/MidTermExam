@@ -8,7 +8,7 @@ const myaddress = document.getElementById('address');
 const myage = document.getElementById('age');
 const curavatar = document.querySelector('.profile img, .card img');
 
-const nextBtn = document.getElementById('next-profile-btn');
+const nextBtn = document.getElementById('my-next-btn');
 
 
 // Function to fetch random user
