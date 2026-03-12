@@ -10,24 +10,24 @@ const curavatar = document.querySelector('.profile img, .card img');
 
 const nextBtn = document.getElementById('my-next-btn');
 
-
 // Function to fetch random user
 async function getUser() {
 
     try {
 
+        //get api link and hope for response
         const response = await fetch('https://randomuser.me/api/');
         const data = await response.json();
-
         const user = data.results[0];
 
-        const fullName = `${user.name.first} ${user.name.last}`;
+        //fetch parameters from api
+        const usersrealname = `${user.name.first} ${user.name.last}`;
         const email = user.email;
         const location = `${user.location.city}, ${user.location.state}`;
         const age = user.dob.age;
         const picture = user.picture.large;
 
-        myname.textContent = fullName;
+        myname.textContent = usersrealname;
         myemail.textContent = email;
         myaddress.textContent = location;
         myage.textContent = age;
